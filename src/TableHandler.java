@@ -19,16 +19,16 @@ public class TableHandler {
 		try {
 			readFile();
 		} catch(Exception e) {
+			e.printStackTrace();
 			throw new Exception("Fehler beim lesen der Datei");
 		}
 	}
 	private void readFile() throws IOException {
-		String row;	
+		String row = "";	
 		while((row = file.readLine()) != null) {
 			String dataArr[] = row.split(";");
 			table.addTableRow(new TableRow(dataArr));
 		}
+		file.close();
 	}
-	
-	
 }

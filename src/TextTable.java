@@ -15,5 +15,8 @@ public class TextTable {
 	public void addTableRow(TableRow tableRow) {
 		table.add(tableRow);
 	}
+	public TableRow getTableRow(int index) {
+		return table.get(index);
+	}
 	
 }

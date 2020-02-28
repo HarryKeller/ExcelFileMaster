@@ -7,6 +7,7 @@ public class TableRow {
 		setRow(new ArrayList<TableField>());
 	}
 	public TableRow(String[] textfields) {
+		this();
 		for(int i = 0;i<textfields.length;i++) {
 			column.add(new TableField(textfields[i]));
 		}
