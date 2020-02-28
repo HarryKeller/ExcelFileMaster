@@ -2,21 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TableRow {
-	private List<TableField> column;
+	private List<TableField> row;
 	public TableRow() {
 		setRow(new ArrayList<TableField>());
 	}
 	public TableRow(String[] textfields) {
 		this();
 		for(int i = 0;i<textfields.length;i++) {
-			column.add(new TableField(textfields[i]));
+			row.add(new TableField(textfields[i]));
 		}
 	}
 	public List<TableField> getColumn() {
-		return column;
+		return row;
 	}
 	public void setRow(List<TableField> column) {
-		this.column = column;
+		this.row = column;
+	}
+	public TableField getFieldByIndex(int index) {
+		return row.get(index);
 	}
 	
 }

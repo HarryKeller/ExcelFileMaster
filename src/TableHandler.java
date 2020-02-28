@@ -6,7 +6,7 @@ public class TableHandler {
 
 	private String path;
 	BufferedReader file = null;
-	TextTable table = new TextTable();
+	Table table = new Table();
 	
 	public TableHandler(String pathToCsv) throws Exception {
 		//TODO: Sehr unübersichtlich. Exceptionhandling verbessern.
@@ -30,5 +30,8 @@ public class TableHandler {
 			table.addTableRow(new TableRow(dataArr));
 		}
 		file.close();
+	}
+	public Table getTable() {
+		return table;
 	}
 }
